@@ -1,0 +1,85 @@
+<div class="page">
+  <div class="section">
+    <form [formGroup]="form">
+      <input formControlName="entries">
+    </form>
+
+    <div>{{ endTimeEst$ | async }}</div>
+
+    <form [formGroup]="temp">
+      <div class="flex-row">
+        <div class="flex-row">
+          <input formControlName="edit" type="checkbox">
+          <label>Edit</label>
+        </div>
+        <div class="flex-row">
+          <input formControlName="started" type="checkbox">
+          <label>Started</label>
+        </div>
+      </div>
+      
+      <div class="flex-row">
+        <div>
+          <div>
+            <label>Player A</label>
+            <input formControlName="playerA">
+          </div>
+          <div>
+            <label>Player A Wins</label>
+            <input formControlName="playerAWins" type="number">
+          </div>
+        </div>
+        
+        <div>
+          <div>
+            <label>Player B</label>
+            <input formControlName="playerB">
+          </div>
+          <div>
+            <label>Player B Wins</label>
+            <input formControlName="playerBWins" type="number">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<ng-template #editStartedMatch>
+  <form [formGroup]="temp">
+    <div class="flex-row">
+      <div class="flex-row">
+        <input formControlName="edit" type="checkbox">
+        <label>Edit</label>
+      </div>
+      <div class="flex-row">
+        <input formControlName="started" type="checkbox">
+        <label>Started</label>
+      </div>
+    </div>
+    
+    <div class="flex-row">
+      <div>
+        <div>
+          <label>Player A</label>
+          <input formControlName="playerA">
+        </div>
+        <div>
+          <label>Player A Wins</label>
+          <input formControlName="playerAWins" type="number">
+        </div>
+      </div>
+      
+      <div>
+        <div>
+          <label>Player B</label>
+          <input formControlName="playerB">
+        </div>
+        <div>
+          <label>Player B Wins</label>
+          <input formControlName="playerBWins" type="number">
+        </div>
+      </div>
+    </div>
+  </form>
+</ng-template>
